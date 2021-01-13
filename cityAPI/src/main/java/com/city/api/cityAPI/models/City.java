@@ -5,34 +5,34 @@ import java.util.Objects;
 public class City
 {
     
-    private String id_ibge;
+    private String ibge_id;
     
     private String uf;
 
     private String name;
 
-    private String isCapital;
+    private String is_capital;
 
     private String longitude;
 
     private String latitude;
 
-    private String alternative_name;
+    private String alternative_names;
 
-    private String microRegion;
+    private String microregion;
 
-    private String mesoRegion;
+    private String mesoregion;
 
-    public City(String id_ibge, String uf, String name, String isCapital, String longitude, String latitude, String alternative_name, String microRegion, String mesoRegion) {
-        this.id_ibge = id_ibge;
+    public City(String ibge_id, String uf, String name, String isCapital, String longitude, String latitude, String alternative_names, String microregion, String mesoregion) {
+        this.ibge_id = ibge_id;
         this.uf = uf;
         this.name = name;
-        this.isCapital = isCapital;
+        this.is_capital = isCapital;
         this.longitude = longitude;
         this.latitude = latitude;
-        this.alternative_name = alternative_name;
-        this.microRegion = microRegion;
-        this.mesoRegion = mesoRegion;
+        this.alternative_names = alternative_names;
+        this.microregion = microregion;
+        this.mesoregion = mesoregion;
     }
 
     /*
@@ -40,12 +40,12 @@ public class City
          */
     public String getId_ibge()
     {
-        return id_ibge;
+        return ibge_id;
     }
 
-    public void setId_ibge(String id_ibge)
+    public void setId_ibge(String ibge_id)
     {
-        this.id_ibge = id_ibge;
+        this.ibge_id = ibge_id;
     }
 
     public String getUf()
@@ -70,12 +70,12 @@ public class City
 
     public String isCapital()
     {
-        return isCapital;
+        return is_capital;
     }
 
-    public void setCapital(String isCapital)
+    public void setCapital(String is_capital)
     {
-        this.isCapital = isCapital;
+        this.is_capital = is_capital;
     }
 
     public String getLongitude()
@@ -98,34 +98,34 @@ public class City
         this.latitude = latitude;
     }
 
-    public String getAlternativeName()
+    public String getAlternativeNames()
     {
-        return alternative_name;
+        return alternative_names;
     }
 
-    public void setAlternativeName(String alternative_name)
+    public void setAlternativeNames(String alternative_names)
     {
-        this.alternative_name = alternative_name;
+        this.alternative_names = alternative_names;
     }
 
     public String getMicroRegion()
     {
-        return microRegion;
+        return microregion;
     }
 
-    public void setMicroRegion(String microRegion)
+    public void setMicroRegion(String microregion)
     {
-        this.microRegion = microRegion;
+        this.microregion = microregion;
     }
 
     public String getMesoRegion()
     {
-        return mesoRegion;
+        return mesoregion;
     }
 
-    public void setMesoRegion(String mesoRegion)
+    public void setMesoRegion(String mesoregion)
     {
-        this.mesoRegion = mesoRegion;
+        this.mesoregion = mesoregion;
     }
 
     @Override
@@ -133,26 +133,26 @@ public class City
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         City city = (City) o;
-        return id_ibge.equals(city.id_ibge) && uf.equals(city.uf) && name.equals(city.name) && Objects.equals(isCapital, city.isCapital) && longitude.equals(city.longitude) && latitude.equals(city.latitude) && microRegion.equals(city.microRegion) && mesoRegion.equals(city.mesoRegion);
+        return ibge_id.equals(city.ibge_id) && uf.equals(city.uf) && name.equals(city.name) && Objects.equals(is_capital, city.is_capital) && longitude.equals(city.longitude) && latitude.equals(city.latitude) && microregion.equals(city.microregion) && mesoregion.equals(city.mesoregion);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_ibge, uf, name, isCapital, longitude, latitude, microRegion, mesoRegion);
+        return Objects.hash(ibge_id, uf, name, is_capital, longitude, latitude, microregion, mesoregion);
     }
 
     @Override
     public String toString() {
         return "City{" +
-                "id_ibge='" + id_ibge + '\'' +
+                "ibge_id='" + ibge_id + '\'' +
                 ", uf='" + uf + '\'' +
                 ", name='" + name + '\'' +
-                ", isCapital=" + isCapital +
+                ", isCapital=" + is_capital +
                 ", longitude=" + longitude +
                 ", latitude=" + latitude +
-                ", alternative_name='" + alternative_name + '\'' +
-                ", microRegion='" + microRegion + '\'' +
-                ", mesoRegion='" + mesoRegion + '\'' +
+                ", alternative_names='" + alternative_names + '\'' +
+                ", microregion='" + microregion + '\'' +
+                ", mesoregion='" + mesoregion + '\'' +
                 '}';
     }
 

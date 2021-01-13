@@ -15,6 +15,9 @@ public class CityService {
     @Autowired
     DSLContext context;
 
+    @Autowired
+    CityDAO cityDAO;
+
     public List<City> getCapitalsOrderedByName()
     {
         return new CityDAO().getCapitalsOrderedByName(context);
@@ -38,6 +41,26 @@ public class CityService {
     public List<String> getCityNamesByState(String stateName)
     {
         return new CityDAO().getCityNamesByState(stateName, context);
+    }
+
+    public City insertCity(City city)
+    {
+        return cityDAO.insertCity(city, context);
+    }
+
+    public Long deleteCity(Long id_ibge)
+    {
+        return cityDAO.deleteCity(id_ibge, context);
+    }
+
+    public List<City> getColumnFiltered(String column, String stringToFilter)
+    {
+        return new CityDAO().getColumnFiltered(column, stringToFilter, context);
+    }
+
+    public Integer getRegistersInColumn(String column)
+    {
+        return new CityDAO().getRegistersInColumn(column, context);
     }
 
     public Integer getTotalNumberOfCities()
